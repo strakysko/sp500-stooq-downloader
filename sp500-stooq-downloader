@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
+Created on Aug 4 2025
 Pull daily Close prices for all S&P 500 constituents from Stooq
 and save a space-efficient Parquet file.
+@author: David Straka
 
 Requirements:
     pip install pandas pyarrow requests tqdm lxml
