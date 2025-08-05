@@ -1,10 +1,22 @@
 #!/usr/bin/env python3
 """
+Created on Aug 5, 2025
 Extract SPY constituent tickers and index weights into a Pandas DataFrame.
+@author: David Straka
 
 Requirements
 ------------
 pip install pandas requests openpyxl
+"""
+
+"""
+Created on Aug 4 2025
+Pull daily Close prices for all S&P 500 constituents from Stooq
+and save a space-efficient Parquet file.
+@author: David Straka
+
+Requirements:
+    pip install pandas pyarrow requests tqdm lxml
 """
 
 import io
@@ -53,3 +65,4 @@ if __name__ == "__main__":
     spy_df.to_csv(output_path, index=False)
     print(f"SP500 weightings saved to {output_path}")
     # If you need the DataFrame in other code, just import load_spy_weights().
+
